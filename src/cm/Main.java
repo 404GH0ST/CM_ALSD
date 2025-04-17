@@ -33,9 +33,9 @@ public class Main {
             System.out.println("0. Keluar");
 
             System.out.print("Pilih menu: ");
-            System.out.println();
 
             int pilihan = sc.nextInt();
+            System.out.println();
             sc.nextLine();
             if (pilihan == 1) {
                 System.out.println("Daftar mahasiswa");
