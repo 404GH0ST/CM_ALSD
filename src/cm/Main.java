@@ -33,6 +33,7 @@ public class Main {
             System.out.println("0. Keluar");
 
             System.out.print("Pilih menu: ");
+            System.out.println();
 
             int pilihan = sc.nextInt();
             sc.nextLine();
@@ -54,7 +55,28 @@ public class Main {
                             + " | Nilai Akhir: " + penilaian.nilaiAkhir);
                 }
             } else if (pilihan == 4) {
-                continue;
+                // Hitung nilai akhir jika belum dihitung
+                if (listPenilaian[0].nilaiAkhir == 0) {
+                    for (Penilaian penilaian : listPenilaian) {
+                        penilaian.HitungNilaiAkhir();
+                    }
+                }
+                // Sorting nilai akhir dengan bubble sort
+                int jmlData = listPenilaian.length;
+                for (int i = 0; i < jmlData - 1; i++) {
+                    for (int j = 1; j < jmlData - i; j++) {
+                        if (listPenilaian[j - 1].nilaiAkhir < listPenilaian[j].nilaiAkhir) {
+                            Penilaian temp = listPenilaian[j];
+                            listPenilaian[j] = listPenilaian[j - 1];
+                            listPenilaian[j - 1] = temp;
+                        }
+                    }
+                }
+                System.out.println("Data Penilaian:");
+                for (Penilaian penilaian : listPenilaian) {
+                    System.out.println(penilaian.mahasiswa.nama + " | " + penilaian.mataKuliah.namaMK
+                            + " | Nilai Akhir: " + penilaian.nilaiAkhir);
+                }
             } else if (pilihan == 5) {
                 System.out.print("Masukkan NIM mahasiswa yang dicari: ");
                 String NIM = sc.nextLine();
