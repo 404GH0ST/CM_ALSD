@@ -39,7 +39,7 @@ public class Main {
             if (pilihan == 1) {
                 System.out.println("Daftar mahasiswa");
                 for (Mahasiswa mahasiswa : listMahasiswa) {
-                    mahasiswa.tampilMahasiswa();  
+                    mahasiswa.tampilMahasiswa();
                 }
             } else if (pilihan == 2) {
                 System.out.println("Daftar matakuliah");
@@ -47,10 +47,11 @@ public class Main {
                     matakuliah.tampilMataKuliah();
                 }
             } else if (pilihan == 3) {
-                System.out.println("=== DATA PENILAIAN ===");
+                System.out.println("Data Penilaian");
                 for (Penilaian penilaian : listPenilaian) {
                     penilaian.HitungNilaiAkhir();
-                    System.out.println(penilaian.mahasiswa.nama + " | " + penilaian.mataKuliah.namaMK + " | Nilai Akhir: " + penilaian.nilaiAkhir);
+                    System.out.println(penilaian.mahasiswa.nama + " | " + penilaian.mataKuliah.namaMK
+                            + " | Nilai Akhir: " + penilaian.nilaiAkhir);
                 }
             } else if (pilihan == 4) {
                 continue;
@@ -69,9 +70,9 @@ public class Main {
         }
     }
 
-    public static int cariMahasiswa(Mahasiswa[] listMahasiswa,String NIM) {
-        for(int i = 0; i < listMahasiswa.length; i++) {
-            if(listMahasiswa[i].NIM.equals(NIM)) {
+    public static int cariMahasiswa(Mahasiswa[] listMahasiswa, String NIM) {
+        for (int i = 0; i < listMahasiswa.length; i++) {
+            if (listMahasiswa[i].NIM.equals(NIM)) {
                 return i;
             }
         }
