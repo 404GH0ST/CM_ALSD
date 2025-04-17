@@ -1,23 +1,21 @@
 package cm;
 
-public class Matakuliah {
+public class MataKuliah {
     String kodeMK;
     String namaMK;
     int sks;
 
-    Matakuliah(){
+    MataKuliah(){
 
     }
 
-    Matakuliah(String kd, String nm, int sk){
+    MataKuliah(String kd, String nm, int sk){
         kodeMK = kd;
         namaMK = nm;
         sks = sk;
     }
 
-    void tampilMatakuliah(){
-        System.out.println("KodeMK: " + kodeMK);
-        System.out.println("NamaMK:" + namaMK);
-        System.out.println("SKS:" + sks);
+    void tampilMataKuliah(){
+        System.out.println("Kode MK: " + this.kodeMK + " | Nama: " + this.namaMK + " | SKS: " + this.sks);
     }
 }
