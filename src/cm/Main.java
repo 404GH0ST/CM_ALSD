@@ -37,14 +37,20 @@ public class Main {
             int pilihan = sc.nextInt();
             sc.nextLine();
             if (pilihan == 1) {
-                continue;
+                System.out.println("Daftar mahasiswa");
+                for (Mahasiswa mahasiswa : listMahasiswa) {
+                    mahasiswa.tampilMahasiswa();  
+                }
             } else if (pilihan == 2) {
-                continue;
+                System.out.println("Daftar matakuliah");
+                for (MataKuliah matakuliah : listMataKuliah) {
+                    matakuliah.tampilMataKuliah();
+                }
             } else if (pilihan == 3) {
                 System.out.println("=== DATA PENILAIAN ===");
                 for (Penilaian penilaian : listPenilaian) {
                     penilaian.HitungNilaiAkhir();
-                    System.out.println(penilaian.mahasiswa.nama + " | " + penilaian.mataKuliah.namaMK + " | " + penilaian.nilaiAkhir);
+                    System.out.println(penilaian.mahasiswa.nama + " | " + penilaian.mataKuliah.namaMK + " | Nilai Akhir: " + penilaian.nilaiAkhir);
                 }
             } else if (pilihan == 4) {
                 continue;

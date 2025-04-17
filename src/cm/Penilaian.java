@@ -16,9 +16,8 @@ public class Penilaian {
         this.nilaiUAS = nilaiUAS;
     }
 
-    public double HitungNilaiAkhir() {
+    void HitungNilaiAkhir() {
         double nilaiAkhir = (nilaiTugas * 0.3) + (nilaiUTS * 0.3) + (nilaiUAS * 0.4);
         this.nilaiAkhir = nilaiAkhir;
-        return nilaiAkhir;
     }
 }
